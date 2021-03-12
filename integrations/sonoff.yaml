@@ -1,0 +1,8 @@
+sonoff:
+  username: !secret sonofUsername
+  password: !secret sonofPassword
+  scan_interval: 60
+  grace_period: 600
+  api_region: 'eu'
+  entity_prefix: True
+  debug: False

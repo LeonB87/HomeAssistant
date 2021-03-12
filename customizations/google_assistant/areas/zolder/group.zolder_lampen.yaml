@@ -1,0 +1,13 @@
+# Entity configuration for Google Assistant.
+#
+# I use this to customize how the device shows up in Google Assistant.
+#
+# https://www.home-assistant.io/integrations/google_assistant/#entity_config
+#
+group.zolder_lampen:
+  expose: true
+  name: zolder lampen
+  aliases:
+    - alle lampen op zolder
+    - alle zolder lampen
+  room: Zolder

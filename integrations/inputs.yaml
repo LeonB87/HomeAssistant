@@ -1,0 +1,25 @@
+input_boolean :
+    wakeup_enabled:
+      name: "Wake-up lights"
+      icon: mdi:theme-light-dark
+    wakeup_weekend:
+      name: "Weekend Wake-up lights"
+      initial: off #
+      icon: mdi:calendar-blank
+    wakeup_nachtlamp_leon:
+      name: "Nachtlamp Léon"
+      icon: mdi:lightbulb
+    wakeup_nachtlamp_suzanne:
+      name: "Nachtlamp Suzanne"
+      icon: mdi:lightbulb
+    wakeup_plafond_slaapkamer:
+      name: "Plafond slaapkamer"
+      icon: mdi:lightbulb
+
+
+input_datetime:
+    wakeup_time:
+      name: "Begin met licht om"
+      has_time: true
+      has_date: false
+      initial: "06:00"

@@ -1,0 +1,144 @@
+# 
+resources:
+  - url: /local/custom_ui/weather-card.js
+    type: js
+
+title: Home
+views:
+  - id: 0  # Automatically created id
+    title: default_view
+    icon: mdi:home
+    cards:
+      - id: 9280f9599bcb46bc8724995a74afb4ab  # Automatically created id
+        type: horizontal-stack
+        cards:
+          - type: picture-entity
+            image: /local/images/desklight.jpeg
+            name: Lamp Woonkamer
+            entity: switch.woonkamerlamp
+          - type: picture-entity
+            image: /local/images/television.jpg
+            name: Televisie
+            entity: media_player.lg_woonkamer
+      - id: bedce28fc13d499ba66f12354d21a835  # Automatically created id
+        type: entities
+        title: Woonkamer Condities
+        show_header_toggle: true
+        entities:
+          - sensor.netatmo_woonkamer_temperature
+          - sensor.netatmo_woonkamer_humidity
+          - sensor.netatmo_woonkamer_co2
+          - sensor.netatmo_woonkamer_noise
+      - id: 16bccacc3e2d4f46beceb0e3d5041341  # Automatically created id
+        type: entities
+        title: Klimaat
+        show_header_toggle: true
+        entities:
+          - sensor.netatmo_woonkamer_pressure
+          - sensor.netatmo_buitenmodule_temperature
+          - sensor.netatmo_buitenmodule_humidity
+      - id: aedead78437b429aa5c8133962b77941  # Automatically created id
+        type: weather-forecast
+        entity: weather.ridderkerk
+  - id: 1  # Automatically created id
+    title: Slaapkamer
+    icon: mdi:bed-empty
+    cards:
+      - id: 09289f4abee14aa4b8e75f43cd2c0996  # Automatically created id
+        type: horizontal-stack
+        cards:
+          - type: picture-entity
+            image: /local/images/nachtlamp.jpg
+            name: Léon
+            entity: light.slaapkamer_bed
+          - type: picture-entity
+            image: /local/images/nachtlamp.jpg
+            name: Suzanne
+            entity: light.slaapkamer_bed
+      - id: 5f432fd789fa49eb83b75e59a92337b6  # Automatically created id
+        type: horizontal-stack
+        cards:
+          - type: picture-entity
+            image: /local/images/plafondlamp.jpg
+            name: Plafondlamp
+            entity: light.slaapkamer_bed
+      - id: 50fee4699bde455eaa49a66905cbeefe  # Automatically created id
+        type: entities
+        title: Lampen
+        entities:
+          - entity: light.slaapkamer_bed
+            name: Plafondlamp
+          - entity: light.slaapkamer_bed
+            name: Nachtlamp Léon
+          - entity: light.slaapkamer_bed
+            name: Nachtlamp Suzanne
+          - sensor.schakelaar_slaapkamer
+  - id: 2  # Automatically created id
+    title: Lampen
+    icon: mdi:lightbulb
+    cards:
+      - id: 274f75da84054180a24631394eb73865  # Automatically created id
+        type: picture-entity
+        name: Slaapkamer Plafondlamp
+        image: /local/images/bed.png
+        entity: light.slaapkamer_bed
+      - id: 4d4870e193a149efbe0b0418f7239118  # Automatically created id
+        type: picture-entity
+        name: Woonkamer Lamp
+        image: /local/images/living_room.png
+        entity: switch.woonkamerlamp
+      - id: fc8cfc95ffab46408b5bf9f86e4ba12c  # Automatically created id
+        type: picture-entity
+        name: Ledstrip
+        image: /local/images/LEDStrip.jpg
+        entity: light.ledstrip1
+  - id: 3  # Automatically created id
+    title: Media Players
+    icon: mdi:headphones
+    cards:
+      - id: bb312be24c4f4e29a7fa77a95f5a5075  # Automatically created id
+        type: media-control
+        entity: media_player.woonkamer
+      - id: 2e3f28696183414e85df4d73ff58fd88  # Automatically created id
+        type: media-control
+        entity: media_player.lg_woonkamer
+      - id: e4922186c7a94defafdaf5d0f623e27c  # Automatically created id
+        type: media-control
+        entity: media_player.spotify
+  - id: 4  # Automatically created id
+    title: Reis informatie
+    icon: mdi:train
+    cards:
+      - id: f2d360c270f641f6a4dafafbfc4af994  # Automatically created id
+        type: entities
+        entities:
+          - sensor.ishw
+          - sensor.mee
+      - id: 8bc8c9a254854ea3ac960b8c2fc627c8  # Automatically created id
+        type: entities
+        name: test
+        entities:
+          - camera.1
+  - id: 5  # Automatically created id
+    title: Monitoring
+    icon: mdi:monitor-cellphone-star
+    cards:
+      - id: 5a0c604b2bc8416c9280e269408f003e  # Automatically created id
+        type: entities
+        entities:
+          - sensor.fritz_netmonitor
+      - id: 9581288258654c66972aaba788ac181b  # Automatically created id
+        type: entities
+        title: Overzicht batterijen
+        entities:
+          - entity: sensor.schakelaar_slaapkamer
+            name: Slaapkamer Schakelaar
+            icon: mdi:light-switch
+  - title: Weather
+    icon: mdi:weather-cloudy
+    id: weather
+    garage_door_tilt_sensor_alarm_level: Weather
+    cards:
+      - id: e8e1063fd86b44a3b3af2dd842f85815  # Automatically created id
+        type: "custom:weather-card"
+        entity_sun: sun.sun

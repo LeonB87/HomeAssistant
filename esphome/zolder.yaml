@@ -1,0 +1,58 @@
+esphome:
+  name: zolder
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  domain: .wds.local
+  use_address: zolder.wds.local
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Zolder Fallback Hotspot"
+    password: "iz2Xz1ZvpXqu"
+
+# Enable Home Assistant API.
+api:
+
+# Enable over-the-air updates.
+ota:
+
+captive_portal:
+
+# Enable Web server.
+web_server:
+  port: 80
+
+ # Enable logging
+logger:
+
+# Sync time with Home Assistant.
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+sensor:
+# Uptime sensor.
+  - platform: uptime
+    name: Zolder Uptime
+    
+# WiFi Signal sensor.
+  - platform: wifi_signal
+    name: Zolder WiFi Signal
+    update_interval: 60s
+    filters:
+    - sliding_window_moving_average:
+        window_size: 15
+        send_every: 15
+
+  - platform: dht
+    pin: D5
+    model: DHT22
+    temperature:
+      name: "Zolder temperatuur"
+    humidity:
+      name: "Zolder luchtvochtigheid"
+    update_interval: 600s

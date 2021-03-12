@@ -1,0 +1,8 @@
+name: Alle lampen in de keuken
+entities:
+  - light.bar_lamp_1
+  - light.bar_lamp_2
+  - light.bar_lamp_3
+  - light.keuken_lamp_1
+  - light.keuken_lamp_2
+  - light.keuken_lamp_3

@@ -1,0 +1,5 @@
+name: alle lampen boven de bar
+entities:
+    - light.bar_lamp_1
+    - light.bar_lamp_2
+    - light.bar_lamp_3

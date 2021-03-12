@@ -1,0 +1,59 @@
+default_view:
+  name: default_view
+  icon: mdi:home
+  entities:
+    - group.Woonkamer_Switches
+    - group.Woonkamer_Sensoren
+    - group.Klimaat
+    - group.Media
+Woonkamer_Switches:
+  name: Woonkamer Schakelaars
+  entities:
+    - Switch.WoonkamerTV
+Woonkamer_Sensoren:
+  name: Woonkamer Condities
+  entities:
+    - sensor.netatmo_Woonkamer_temperature
+    - sensor.netatmo_Woonkamer_humidity
+    - sensor.netatmo_Woonkamer_co2
+    - sensor.netatmo_Woonkamer_noise
+
+Keuken_Lampen:
+  name: Keuken Lampen
+  entities:
+    - light.bar_lamp_1
+    - light.bar_lamp_2
+    - light.bar_lamp_3
+    - light.keuken_lamp_1
+    - light.keuken_lamp_2
+    - light.keuken_lamp_3
+
+Mensen:
+  name: Mensen
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.google_maps
+    - device_tracker.Leon
+Klimaat:
+  name: Klimaat
+  entities:
+    - weather.Ridderkerk
+    - sensor.netatmo_Woonkamer_pressure
+    - sensor.netatmo_BuitenModule_temperature
+    - sensor.netatmo_BuitenModule_humidity
+Media_Players:
+  name: Media Players
+  icon: mdi:headphones
+  entities:
+    - media_player.woonkamer
+    - media_player.LG_woonkamer
+    - media_player.spotify
+Forensen:
+  name: Reis informatie
+  icon: mdi:train
+Data:
+  name: Informatie
+  icon: mdi:glasses
+  entities:
+    - sensor.fritz_netmonitor
+mobile_app:

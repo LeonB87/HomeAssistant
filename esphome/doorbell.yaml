@@ -1,0 +1,55 @@
+esphome:
+  name: doorbell
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+    ssid: WDS
+    password: magikjewifigebruikenaub
+    domain: .wds.local
+    use_address: doorbell.wds.local
+    
+# Enable Home Assistant API.
+api:
+
+# Enable over-the-air updates.
+ota:
+
+captive_portal:
+
+# Enable Web server.
+web_server:
+  port: 80
+
+# Enable logging
+logger:
+
+# Sync time with Home Assistant.
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+# Text sensors with general information.
+text_sensor:
+  # Expose ESPHome version as sensor.
+  - platform: version
+    name: Doorbell ESPHome Version
+  # Expose WiFi information as sensors.
+  - platform: wifi_info
+    ip_address:
+      name: Doorbell IP
+    ssid:
+      name: Doorbell SSID
+    bssid:
+      name: Doorbell BSSID
+
+# Sensors with general information.
+sensor:
+  # Uptime sensor.
+  - platform: uptime
+    name: Doorbell Uptime
+
+  # WiFi Signal sensor.
+  - platform: wifi_signal
+    name: Doorbell WiFi Signal
+    update_interval: 60s

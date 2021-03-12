@@ -1,0 +1,71 @@
+sensor.netatmo_woonkamer_co2:
+  friendly_name: CO2
+sun.sun:
+  friendly_name: Zon
+media_player.woonkamer:
+  friendly_name: Chromecast Woonkamer
+sensor.netatmo_buitenmodule_temperature_2:
+  friendly_name: Temperatuur
+sensor.netatmo_woonkamer_noise:
+  friendly_name: Geluid
+sensor.netatmo_woonkamer_co2_2:
+  friendly_name: CO2
+sensor.netatmo_woonkamer_humidity:
+  device_class: humidity
+  friendly_name: Luchtvochtigheid
+sensor.netatmo_woonkamer_temperature:
+  friendly_name: Temperatuur
+sensor.netatmo_woonkamer_temperature_2:
+  friendly_name: Temperatuur
+sensor.netatmo_buitenmodule_humidity:
+  friendly_name: Luchtvochtigheid
+sensor.netatmo_woonkamer_pressure:
+  friendly_name: Luchtdruk
+sensor.netatmo_woonkamer_pressure_2:
+  friendly_name: Luchtdruk
+sensor.netatmo_buitenmodule_temperature:
+  friendly_name: Temperatuur
+device_tracker.google_maps_103534857570442692372:
+  friendly_name: Léon
+light.zolderlamp:
+  icon: mdi:ceiling-light
+light.slaapkamer_bed:
+  icon: mdi:ceiling-light
+switch.lamp_naast_televisie:
+  icon: mdi:lamp
+switch.staande_lamp_op_zolder:
+  icon: mdi:floor-lamp
+switch.lamp_achter_de_bank:
+  icon: mdi:lamp
+light.ledstrip1:
+  icon: mdi:led-off
+device_tracker.google_maps_107580464714129559282:
+  friendly_name: Suzanne
+sensor.worldwide_coronavirus_deaths:
+  friendly_name: Overleden
+  icon: mdi:emoticon-dead-outline
+  unit_of_measurement: mensen
+sensor.worldwide_coronavirus_recovered:
+  friendly_name: Genezen
+  icon: mdi:emoticon-excited-outline
+  unit_of_measurement: mensen
+sensor.worldwide_coronavirus_current:
+  icon: mdi:emoticon-sad-outline
+sensor.worldwide_coronavirus_confirmed:
+  icon: mdi:emoticon-neutral-outline
+person.leon:
+  icon: mdi:cat
+group.keuken_bar_lampen:
+  icon: mdi:lightbulb-multiple
+group.keuken_lampen:
+  icon: mdi:lightbulb-multiple
+media_player.nesthub8440:
+  icon: mdi:lightbulb-multiple
+group.keuken_alle_lampen:
+  icon: mdi:lightbulb-multiple
+sensor.slaapkamer_luchtvochtigheid:
+  icon: mdi:water-percent
+sensor.slaapkamer_co2:
+  icon: mdi:periodic-table-co2
+sensor.mh_z19_co2_value:
+  icon: mdi:molecule-co2

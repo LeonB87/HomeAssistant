@@ -1,0 +1,16 @@
+- id: '1576160786601'
+  alias: kerstboom uit om middernacht
+  description: ''
+  trigger:
+  - at: 00:01
+    platform: time
+  condition:
+  - condition: state
+    entity_id: input_boolean.kerstboom_uit_om_middernacht
+    state: 'true'
+  action:
+  - type: turn_off
+    device_id: 3978e4a85e9b495588a29b2c3d90f32a
+    entity_id: switch.extra_lamp
+    domain: switch
+  mode: single

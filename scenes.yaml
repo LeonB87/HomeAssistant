@@ -1,0 +1,128 @@
+- id: '1608994304077'
+  name: Kerstverlichting
+  entities:
+    light.bar_lamp_1:
+      brightness: 56
+      hs_color:
+      - 120
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 0
+      xy_color:
+      - 0.172
+      - 0.747
+      friendly_name: bar lamp 1
+      supported_features: 49
+      state: 'on'
+    light.bar_lamp_2:
+      brightness: 53
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      friendly_name: bar lamp 2
+      supported_features: 49
+      state: 'on'
+    light.bar_lamp_3:
+      brightness: 56
+      hs_color:
+      - 120
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 0
+      xy_color:
+      - 0.172
+      - 0.747
+      friendly_name: bar lamp 3
+      supported_features: 49
+      state: 'on'
+    switch.extra_lamp:
+      friendly_name: Kerstboom
+      state: 'on'
+  icon: mdi:string-lights
+- id: '1609357099111'
+  name: Eten
+  entities:
+    light.bar_lamp_1:
+      brightness: 56
+      hs_color:
+      - 29.164
+      - 80.271
+      rgb_color:
+      - 255
+      - 149
+      - 50
+      xy_color:
+      - 0.57
+      - 0.387
+      friendly_name: bar lamp 1
+      supported_features: 49
+      state: 'on'
+    light.bar_lamp_2:
+      brightness: 53
+      hs_color:
+      - 29.164
+      - 80.271
+      rgb_color:
+      - 255
+      - 149
+      - 50
+      xy_color:
+      - 0.57
+      - 0.387
+      friendly_name: bar lamp 2
+      supported_features: 49
+      state: 'on'
+    light.bar_lamp_3:
+      brightness: 56
+      hs_color:
+      - 29.164
+      - 80.271
+      rgb_color:
+      - 255
+      - 149
+      - 50
+      xy_color:
+      - 0.57
+      - 0.387
+      friendly_name: bar lamp 3
+      supported_features: 49
+      state: 'on'
+    light.keuken_lamp_1:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: keuken lamp 1
+      supported_features: 35
+      state: 'off'
+    light.keuken_lamp_2:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: keuken lamp 2
+      supported_features: 35
+      state: 'off'
+    light.keuken_lamp_3:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: keuken lamp 3
+      supported_features: 35
+      state: 'off'
+    switch.lamp_achter_de_bank:
+      current_power_w: '0.00'
+      total_energy_kwh: '1.512'
+      voltage: '235.2'
+      current_a: '0.03'
+      today_energy_kwh: '0.088'
+      friendly_name: lamp achter de bank
+      icon: mdi:lamp
+      state: 'off'
+  icon: mdi:food

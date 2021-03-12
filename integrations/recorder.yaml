@@ -1,0 +1,16 @@
+recorder:
+    purge_keep_days: 2
+    auto_purge: true
+    db_url: !secret databaseUrl
+    exclude:
+      domains:
+        - automation
+        - updater
+      entity_globs:
+        - sensor.weather_*
+      entities:
+        - sun.sun # Don't record sun data
+        - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+        - sensor.date
+      event_types:
+        - call_service # Don't record service calls

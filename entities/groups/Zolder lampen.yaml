@@ -1,0 +1,6 @@
+name: Lampen op zolder
+entities:
+  - light.zolderlamp_dressoir
+  - light.plafondlamp_zolder
+  - light.zolderlamp_kastje
+  - switch.staande_lamp_op_zolder

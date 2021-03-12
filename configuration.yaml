@@ -1,0 +1,107 @@
+
+homeassistant:
+  # metric for Metric, imperial for Imperial
+  # unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  # time_zone: Europe/Amsterdam
+  # Customization file
+  packages: !include_dir_named integrations
+  customize: !include customize.yaml
+  auth_providers:
+    - type: homeassistant
+
+# Enables the frontend
+#frontend:
+
+# Enables configuration UI
+#config:
+
+# default_config:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+# updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+# discovery:
+
+#mobile_app:
+
+# system_health:
+
+# spotify:
+#   client_id: !secret spotifyUsername
+#   client_secret: !secret spotifyPassword
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time
+#history:
+
+# View all events in a logbook
+# logbook:
+
+# api:
+
+# Enables a map showing the location of tracked devices
+# map:
+
+# # Track the sun
+# sun:
+
+# Text to speech
+# tts:
+#   - platform: google_translate
+#     service_name: google_say
+
+# Cloud
+cloud:
+
+scene: !include scenes.yaml
+
+weather:
+  - platform: buienradar
+    name: 'Ridderkerk'
+    forecast: True
+#light:
+ # - platform: flux_led
+ #   devices:
+ #     192.168.178.31:
+ #       name: ledstrip1
+  #    192.168.178.197:
+ #       name: ledstrip_tv
+
+# google_assistant:
+#   project_id: westerdijkstraat
+#   service_account: !include /config/google_service_account.json
+#   report_state: true
+#   expose_by_default: true
+#   exposed_domains:
+#     - light
+#     - group
+#     - switch
+#     - climate
+#     - sensor
+#     - script
+#     - scene
+#     - input_selected
+#     - input_boolean
+#   entity_config:
+#     sensor.netatmo_driebruggen_pressure_trend:
+#       expose: false
+#     sensor.netatmo_driebruggen_temperature_trend:
+#       expose: false
+#     sensor.netatmo_westerdijkstraat_woonkamer_babykamer_battery_percent:
+#       expose: false
+#     sensor.netatmo_westerdijkstraat_woonkamer_babykamer_co2:
+#       expose: false
+
+#group: !include_dir_named groups
+#automation: !include automations.yaml
+script: !include scripts.yaml

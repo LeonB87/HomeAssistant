@@ -1,0 +1,37 @@
+'1569264923034':
+  alias: Slaapkamer lampen na 10 minuten
+  sequence:
+  - timeout: 00:10:00
+    wait_template: ''
+  - device_id: a09f612919024f20b87a86eff11b8322
+    domain: light
+    entity_id: light.nachtlamp_leon_2
+    type: turn_off
+  - device_id: 6e1c89a634604b9c95f512d552693e4d
+    domain: light
+    entity_id: light.nachtlamp_suzanne_2
+    type: turn_off
+  - type: turn_off
+    device_id: b3f9c5df620f409590d64987e12e8c89
+    entity_id: light.plafondlamp_slaapkamer
+    domain: light
+  mode: single
+eten:
+  alias: Eten
+  sequence:
+  - scene: scene.eten
+  - service: media_player.turn_on
+    data: {}
+    entity_id: media_player.nesthub8440
+  - service: media_player.select_source
+    data:
+      source: media_player.spotify_1110420411
+    entity_id: media_player.nesthub8440
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.nesthub8440
+      media_content_id: https://open.spotify.com/playlist/5xddIVAtLrZKtt4YGLM1SQ?si=YcvRqaKNTxOi043Qn4LYkg
+      media_content_type: playlist
+    entity_id: media_player.spotify_1110420411
+  mode: single
+  icon: mdi:food
